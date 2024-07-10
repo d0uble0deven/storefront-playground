@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+
+function RotatingBox(props) {
+  const mesh = useRef();
+  const [hovered, setHover] = useState(false);
+  const [active, setActive] = useState(false);
+
+  useFrame((state, delta) => (mesh.current.rotation.x += 0.01));
+
+  return (
+    <mesh
+      {...props}
+      ref={mesh}
+      scale={active ? 1.5 : 1}
+      onClick={(event) => setActive(!active)}
+      onPointerOver={(event) => setHover(true)}
+      onPointerOut={(event) => setHover(false)}
+    >
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={hovered ? "red" : "yellow"} />
+    </mesh>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Canvas>
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      <RotatingBox position={[-1.2, 0, 0]} />
+      <RotatingBox position={[1.2, 0, 0]} />
+    </Canvas>
   );
 }
 
