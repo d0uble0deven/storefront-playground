@@ -1,36 +1,28 @@
-import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import React, { useState, useEffect } from "react";
+import { Canvas } from "@react-three/fiber";
 
-function RotatingBox(props) {
-  const mesh = useRef();
-  const [hovered, setHover] = useState(false);
-  const [active, setActive] = useState(false);
+import Card from "./Card";
+import MockData from "./MockData.json";
 
-  useFrame((state, delta) => (mesh.current.rotation.x += 0.01));
-
-  return (
-    <mesh
-      {...props}
-      ref={mesh}
-      scale={active ? 1.5 : 1}
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? "red" : "yellow"} />
-    </mesh>
-  );
-}
+console.log("mockData: ", MockData);
 
 function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    // Simulating data loading
+    setData(MockData);
+  }, []);
+
   return (
-    <Canvas>
-      <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      <RotatingBox position={[-1.2, 0, 0]} />
-      <RotatingBox position={[1.2, 0, 0]} />
-    </Canvas>
+    <div className="app-container">
+      <Canvas></Canvas>
+      <div className="card-list">
+        {data.map((item, index) => (
+          <Card key={index} data={item} />
+        ))}
+      </div>
+    </div>
   );
 }
 
