@@ -1,7 +1,7 @@
 :root, #root{
   width: 100vw;
   height: 100vh;
-  border: rgb(0, 136, 0) dotted 2px;
+  /* border: rgb(0, 136, 0) dotted 2px; */
 }
 
 body {
@@ -28,7 +28,7 @@ code {
   flex-wrap: wrap;
   gap: 1rem;
   width: 75vw;
-  padding: 1vh 15vw;
+  padding: 1vh 12.5vw;
 }
 
 .card-container {
@@ -85,6 +85,94 @@ ul, li {
   /* display: list-item; */
 }
 
+
+
+/* src/components/NavBar.css */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  /* justify-content: space-between; */
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  width: 98.2vw;
+  /* height: 50px; */
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; */
+    border: rgb(0, 136, 0) dotted 2px;
+
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 73%;
+  /* width: 73vw; */
+    border: rgb(255, 136, 0) dotted 2px;
+
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  /* gap: 2rem; */
+    border: rgb(0, 136, 255) dotted 2px;
+
+}
+
+.nav-bar ul li {
+  display: inline;
+    border: rgb(0, 255, 0) dotted 2px;
+
+}
+
+.nav-bar ul li a {
+  color: white;
+  text-decoration: none;
+    border: rgb(255, 136, 255) dotted 2px;
+
+}
+
+.nav-bar button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+   border: rgb(255, 0, 255) dotted 2px;
+
+}
+
+.nav-bar button:hover {
+  background-color: #777;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+body.dark-mode .nav-bar {
+  background-color: #111;
+}
+
+body.dark-mode .nav-bar button {
+  background-color: #444;
+}
+
+body.dark-mode .nav-bar button:hover {
+  background-color: #666;
+}
+
+body.dark-mode .category {
+  color: #111;
+}
 
 
 /* @media (max-width: 768px) {

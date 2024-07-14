@@ -1,9 +1,9 @@
 import React from "react";
-import CardCategory from "./CardCategory";
-import CardImage from "./CardImage";
-import CardTitle from "./CardTitle";
-import CardSize from "./CardSize";
-import CardHeart from "./CardHeart";
+import CardCategory from "./CardComponents/CardCategory";
+import CardImage from "./CardComponents/CardImage";
+import CardTitle from "./CardComponents/CardTitle";
+import CardSize from "./CardComponents/CardSize";
+import CardHeart from "./CardComponents/CardHeart";
 
 function Card({ data }) {
   return (
