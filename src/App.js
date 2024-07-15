@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-
-// import Card from "./components/Card";
-import MockData from "./MockData.json";
-
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import MarketPlace from "./pages/MarketPlace";
+
+import MockData from "./MockData.json";
 
 console.log("mockData: ", MockData);
 
