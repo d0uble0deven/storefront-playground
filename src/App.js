@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import MarketPlace from "./pages/MarketPlace";
+import ItemDetails from "./pages/ItemDetails";
 
 import MockData from "./MockData.json";
 
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MarketPlace data={data} />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/item/:id" element={<ItemDetails data={data} />} />
         </Routes>
       </Router>
       <Canvas></Canvas>
