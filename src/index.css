@@ -23,6 +23,10 @@ code {
   flex-direction: column;
 }
 
+h1 {
+  margin: auto 13.5vw;
+}
+
 .card-list {
   display: flex;
   flex-wrap: wrap;
@@ -88,6 +92,15 @@ ul, li {
 
 
 /* src/components/NavBar.css */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 73%;
+  /* width: 73vw; */
+    border: rgb(255, 136, 0) dotted 2px;
+}
+
 .nav-bar {
   display: flex;
   justify-content: center;
@@ -103,17 +116,6 @@ ul, li {
   left: 0;
   z-index: 1000; */
     border: rgb(0, 136, 0) dotted 2px;
-
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 73%;
-  /* width: 73vw; */
-    border: rgb(255, 136, 0) dotted 2px;
-
 }
 
 .nav-bar ul {
@@ -150,6 +152,53 @@ ul, li {
 
 .nav-bar button:hover {
   background-color: #777;
+}
+
+/* src/components/SearchBar.css */
+.search-bar-container {
+  width: 73%;
+  margin: 2vh auto;
+}
+
+.search-input {
+  width: 80%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* src/components/Card.css */
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-container {
+  /* border: rgb(255, 136, 0) solid 1px; */
+  width: 280px;
+  height: 244px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sorting-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.sorting-buttons button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 /* Dark mode styles */
