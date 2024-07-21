@@ -89,8 +89,6 @@ ul, li {
   /* display: list-item; */
 }
 
-
-
 /* src/components/NavBar.css */
 .nav-container {
   display: flex;
@@ -200,6 +198,52 @@ ul, li {
   font-size: 1rem;
   cursor: pointer;
 }
+
+/* src/pages/ItemDetails.css */
+.canvas-container {
+  border: rgb(0, 136, 0) dotted 5px;
+  background-color: rgb(227, 199, 163);
+  display: block;
+  width: 805.328px;
+  height: 472.5px;
+  /* touch-action: none; */
+}
+
+.cardDetails-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cardDetails-container {
+  border: 0 solid #e5e7eb;
+  width: 15vw;
+  height: 5vh;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-radius: .5rem;
+  padding: 1.5rem;
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+}
+
+.smallText{
+  font-size: smaller;
+  margin: 0;
+  padding: 0;
+}
+.bigText{
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Dark mode styles */
 body.dark-mode {

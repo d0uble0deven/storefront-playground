@@ -29,7 +29,7 @@ function App() {
           <Route path="/item/:id" element={<ItemDetails data={data} />} />
         </Routes>
       </Router>
-      <Canvas></Canvas>
+      {/* <Canvas></Canvas> */}
     </div>
   );
 }

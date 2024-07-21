@@ -69,8 +69,8 @@ function MarketPlace({ data }) {
         <button onClick={() => handleSort("size")}>Sort by Size</button>
       </div>
       <div className="card-list">
-        {sortedData.map((item, index) => (
-          <Card key={index} data={item} index={item.id} />
+        {sortedData.map((item) => (
+          <Card key={item.id} data={item} />
         ))}
       </div>
     </div>

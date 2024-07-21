@@ -1,4 +1,4 @@
-import React from "react";
+import React, { startTransition } from "react";
 import { useNavigate } from "react-router-dom";
 import CardCategory from "./CardComponents/CardCategory";
 import CardImage from "./CardComponents/CardImage";
@@ -6,13 +6,15 @@ import CardTitle from "./CardComponents/CardTitle";
 import CardSize from "./CardComponents/CardSize";
 import CardHeart from "./CardComponents/CardHeart";
 
-function Card({ data, index }) {
+function Card({ data }) {
   const navigate = useNavigate();
 
   const handleClick = (param) => {
-    // console.log(event);
-    console.log("Card - handleClick - mock-param: ", param);
-    navigate(`/item/${index}`);
+    startTransition(() => {
+      // console.log(event);
+      console.log("Card - handleClick - mock-param: ", param);
+      navigate(`/item/${data.id}`);
+    });
   };
   return (
     <>

@@ -3,7 +3,8 @@
     "id": 1,
     "title": "ruins",
     "category": "architecture",
-    "image": "./images/ruins_image.png",
+    "image": "/images/ruins_image.png",
+    "model": "/models/ruins_model.gltf",
     "size": "51.24 kb",
     "heart": true
   },
@@ -11,7 +12,8 @@
     "id": 2,
     "title": "Anvil",
     "category": "furniture",
-    "image": "./images/anvil_image.png",
+    "image": "/images/anvil_image.png",
+    "model": "/models/anvil_image.gltf",
     "size": "4.15 kb",
     "heart": true
   },
@@ -19,7 +21,8 @@
     "id": 3,
     "title": "solar",
     "category": "technology",
-    "image": "./images/solar_image.png",
+    "image": "/images/solar_image.png",
+    "model": "/models/solar_model.gltf",
     "size": "128 kb",
     "heart": false
   },
@@ -27,7 +30,8 @@
     "id": 4,
     "title": "truck",
     "category": "vehicles",
-    "image": "./images/truck_image.png",
+    "image": "/images/truck_image.png",
+    "model": "/models/truck_model.gltf",
     "size": "256 kb",
     "heart": true
   },
@@ -35,7 +39,8 @@
     "id": 5,
     "title": "umbrella",
     "category": "misc",
-    "image": "./images/umbrella_image.png",
+    "image": "/images/umbrella_image.png",
+    "model": "/models/umbrella_model.gltf",
     "size": "512 kb",
     "heart": true
   },
@@ -43,7 +48,8 @@
     "id": 6,
     "title": "bunny",
     "category": "animals",
-    "image": "./images/bunny_image.png",
+    "image": "/images/bunny_image.png",   
+    "model": "/models/bunny_model.gltf",
     "size": "128 kb",
     "heart": true
   },
@@ -51,7 +57,8 @@
     "id": 7,
     "title": "giraffe",
     "category": "animals",
-    "image": "./images/giraffe_image.png",
+    "image": "/images/giraffe_image.png",
+    "model": "/models/giraffe_model.gltf",
     "size": "128 kb",
     "heart": false
   },
@@ -59,7 +66,8 @@
     "id": 8,
     "title": "spaceship",
     "category": "vehicles",
-    "image": "./images/spaceship_image.png",
+    "image": "/images/spaceship_image.png",
+    "model": "/models/spaceship_model.gltf",
     "size": "256 kb",
     "heart": true
   }
