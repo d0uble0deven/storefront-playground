@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 
 import CardDetails from "../components/CardDetails";
 
@@ -68,21 +68,37 @@ function ItemDetails({ data }) {
   ];
 
   return (
-    <div>
-      <h1>{item.title}</h1>
-      <div class="canvas-container">
-        <Suspense fallback={<div>Loading model...</div>}>
-          <Canvas>
-            {/* <Canvas style={{ height: "500px" }}> */}
-            <ModelLoader modelPath={modelPath} />
-            <OrbitControls />
-          </Canvas>
-        </Suspense>
+    <div style={{ padding: "1vh 12.5vw" }}>
+      <div className="column-container">
+        <div className="column1">
+          <h1>{item.title}</h1>
+          <div className="canvas-container">
+            <Suspense fallback={<div>Loading model...</div>}>
+              <Canvas>
+                <Html>
+                  <p
+                    style={{
+                      position: "absolute",
+                      right: "-370px",
+                      bottom: "170px",
+                    }}
+                  >
+                    {item.heart ? "Yes" : "No"}
+                  </p>
+                </Html>
+                {/* <Canvas style={{ height: "500px" }}> */}
+                <ModelLoader modelPath={modelPath} />
+                <OrbitControls />
+              </Canvas>
+            </Suspense>
+          </div>
+        </div>
+        <div className="column2">
+          <p className="smallText">Category: {item.category}</p>
+          <img src={item.image} alt={item.title} />
+          <p className="smallText">Size: {item.size}</p>
+        </div>
       </div>
-      <p className="smallText">Category: {item.category}</p>
-      <img src={item.image} alt={item.title} />
-      <p className="smallText">Size: {item.size}</p>
-      <p className="smallText">Heart: {item.heart ? "Yes" : "No"}</p>
       <div className="cardDetails-list">
         {nutritionalData.map((item, index) => (
           <CardDetails key={index} nutritionalData={item}></CardDetails>

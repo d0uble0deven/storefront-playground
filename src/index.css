@@ -200,9 +200,31 @@ ul, li {
 }
 
 /* src/pages/ItemDetails.css */
+.column-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  /* border: rgb(255, 136, 255) dotted 5px; */
+
+}
+
+.column1 {
+  flex: 2; /* Takes up 2/3 of the space */
+  /* padding: 20px; */
+  /* border: rgb(0, 255, 0) dotted 5px; */
+
+}
+
+.column2 {
+  flex: 1; /* Takes up 1/3 of the space */
+  /* padding: 20px; */
+  /* border: rgb(0, 136, 255) dotted 5px; */
+  background-color: cadetblue;
+
+}
+
 .canvas-container {
-  border: rgb(0, 136, 0) dotted 5px;
-  background-color: rgb(227, 199, 163);
+  /* border: rgb(0, 136, 0) dotted 5px; */
+  background-color: cornsilk;
   display: block;
   width: 805.328px;
   height: 472.5px;
@@ -212,7 +234,7 @@ ul, li {
 .cardDetails-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
 }
 
@@ -220,7 +242,7 @@ ul, li {
   border: 0 solid #e5e7eb;
   width: 15vw;
   height: 5vh;
-  margin: 1rem;
+  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
