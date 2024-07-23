@@ -13,7 +13,7 @@
     "title": "Anvil",
     "category": "furniture",
     "image": "/images/anvil_image.png",
-    "model": "/models/anvil_image.gltf",
+    "model": "/models/anvil_model.gltf",
     "size": "4.15 kb",
     "heart": true
   },
