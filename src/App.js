@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
@@ -29,7 +28,6 @@ function App() {
           <Route path="/item/:id" element={<ItemDetails data={data} />} />
         </Routes>
       </Router>
-      {/* <Canvas></Canvas> */}
     </div>
   );
 }

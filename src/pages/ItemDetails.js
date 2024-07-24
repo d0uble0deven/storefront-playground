@@ -12,12 +12,17 @@ import CardDetails from "../components/CardDetails";
 function ItemDetails({ data }) {
   const { id } = useParams();
 
-  const [nutrionalFacts, setNutrionalFacts] = useState([]);
+  const [isFavorite, setIsFavorite] = useState(false);
+  const [nutritionalFacts, setNutritionalFacts] = useState([]);
 
   useEffect(() => {
-    // Simulating data loading
-    setNutrionalFacts(nutritionalData);
-  }, []);
+    setNutritionalFacts(nutritionalData);
+
+    const item = data.find((item) => item.id === parseInt(id, 10));
+    if (item) {
+      setIsFavorite(item.heart);
+    }
+  }, [id, data]);
 
   const item = data.find((item) => item.id === parseInt(id, 10));
 
@@ -67,6 +72,14 @@ function ItemDetails({ data }) {
     { key: "Zinc", value: "1.7 %" },
   ];
 
+  const favorite = "/images/favorite.png";
+  const unfavorite = "/images/unfavorite.png";
+
+  const handleToggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+    console.log("handleToggleFavorite - item.heart:", !isFavorite);
+  };
+
   return (
     <div style={{ padding: "1vh 12.5vw" }}>
       <div className="column-container">
@@ -76,15 +89,18 @@ function ItemDetails({ data }) {
             <Suspense fallback={<div>Loading model...</div>}>
               <Canvas>
                 <Html>
-                  <p
+                  <img
+                    onClick={handleToggleFavorite}
                     style={{
                       position: "absolute",
                       right: "-370px",
-                      bottom: "170px",
+                      bottom: "150px",
+                      height: "100px",
+                      width: "100px",
                     }}
-                  >
-                    {item.heart ? "Yes" : "No"}
-                  </p>
+                    src={isFavorite ? favorite : unfavorite}
+                    alt={isFavorite ? "favorite" : "unfavorite"}
+                  ></img>
                 </Html>
                 {/* <Canvas style={{ height: "500px" }}> */}
                 <ModelLoader modelPath={modelPath} />
@@ -94,13 +110,18 @@ function ItemDetails({ data }) {
           </div>
         </div>
         <div className="column2">
-          <p className="smallText">Category: {item.category}</p>
-          <img src={item.image} alt={item.title} />
-          <p className="smallText">Size: {item.size}</p>
+          <div className="productDetails-container">
+            <p>Category: {item.category}</p>
+            {/* <img src={item.image} alt={item.title} /> */}
+            <p>Size: {item.size}</p>
+            <p>Price: $11.99</p>
+            <p>Reviews: 5 Stars (112 reviews)</p>
+            <button>Add to Cart</button>
+          </div>
         </div>
       </div>
       <div className="cardDetails-list">
-        {nutritionalData.map((item, index) => (
+        {nutritionalFacts.map((item, index) => (
           <CardDetails key={index} nutritionalData={item}></CardDetails>
         ))}
       </div>

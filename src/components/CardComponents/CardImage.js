@@ -1,9 +1,14 @@
 import React from "react";
 
-function CardImage({ image }) {
+function CardImage({ image, handleClick }) {
   return (
     <>
-      <img src={image} alt={image}></img>
+      <img
+        className="cardImage"
+        onClick={() => handleClick("mock-param")}
+        src={image}
+        alt={image}
+      ></img>
     </>
   );
 }

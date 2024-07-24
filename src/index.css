@@ -1,7 +1,6 @@
 :root, #root{
   width: 100vw;
   height: 100vh;
-  /* border: rgb(0, 136, 0) dotted 2px; */
 }
 
 body {
@@ -36,8 +35,6 @@ h1 {
 }
 
 .card-container {
-  /* border: rgb(255, 136, 0) solid 1px; */
-  /* background-color: rgb(0, 255, 179); */
   width: 280px;
   height: 244px;
   margin: 1rem;
@@ -49,7 +46,7 @@ h1 {
   border-radius: .5rem;
 }
 
-img {
+.cardImage {
   width: 280px;
   height: 196px;
   margin: 0;
@@ -81,11 +78,10 @@ ul, li {
 .heart {
   /* background-color: rgb(243 244 246); */
   padding: 8px;
-  width: fit-content;
-  /* width: 50%; */
+  width: 2vw;
   position: absolute;
   right: 0;
-  bottom: 2vh;
+  bottom: 0;
   /* display: list-item; */
 }
 
@@ -95,8 +91,6 @@ ul, li {
   justify-content: space-between;
   align-items: center;
   width: 73%;
-  /* width: 73vw; */
-    border: rgb(255, 136, 0) dotted 2px;
 }
 
 .nav-bar {
@@ -113,7 +107,6 @@ ul, li {
   top: 0;
   left: 0;
   z-index: 1000; */
-    border: rgb(0, 136, 0) dotted 2px;
 }
 
 .nav-bar ul {
@@ -121,21 +114,15 @@ ul, li {
   display: flex;
   gap: 1rem;
   /* gap: 2rem; */
-    border: rgb(0, 136, 255) dotted 2px;
-
 }
 
 .nav-bar ul li {
   display: inline;
-    border: rgb(0, 255, 0) dotted 2px;
-
 }
 
 .nav-bar ul li a {
   color: white;
   text-decoration: none;
-    border: rgb(255, 136, 255) dotted 2px;
-
 }
 
 .nav-bar button {
@@ -144,8 +131,6 @@ ul, li {
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
-   border: rgb(255, 0, 255) dotted 2px;
-
 }
 
 .nav-bar button:hover {
@@ -153,19 +138,63 @@ ul, li {
 }
 
 /* src/components/SearchBar.css */
+.search-and-sort {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh auto;
+  width: 80vw;
+  height: 50px;
+}
+
 .search-bar-container {
   width: 73%;
   margin: 2vh auto;
 }
 
 .search-input {
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin: 0 0.5rem;
 }
+
+.sorting-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 15%;
+}
+
+/* .sorting-buttons button {
+  margin: 0 0.5rem;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
+} */
+
+.orderByButton {
+  width: 130px;
+  height: 38px;
+  margin: 0 0.25rem;
+}
+
+.sortButton {
+  width: 50px;
+  height: 36px;
+  background-color: white;
+  margin: 0 0.25rem;
+}
+
+.sortButton img{
+  width: 40px;
+  height: 30px;
+}
+
 
 /* src/components/Card.css */
 .card-list {
@@ -176,7 +205,6 @@ ul, li {
 }
 
 .card-container {
-  /* border: rgb(255, 136, 0) solid 1px; */
   width: 280px;
   height: 244px;
   margin: 1rem;
@@ -186,49 +214,41 @@ ul, li {
   align-items: center;
 }
 
-.sorting-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-.sorting-buttons button {
-  margin: 0 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
 /* src/pages/ItemDetails.css */
 .column-container {
   display: flex;
   flex-wrap: wrap; /* Allows wrapping on smaller screens */
-  /* border: rgb(255, 136, 255) dotted 5px; */
-
 }
 
 .column1 {
   flex: 2; /* Takes up 2/3 of the space */
   /* padding: 20px; */
-  /* border: rgb(0, 255, 0) dotted 5px; */
-
 }
 
 .column2 {
   flex: 1; /* Takes up 1/3 of the space */
   /* padding: 20px; */
-  /* border: rgb(0, 136, 255) dotted 5px; */
-  background-color: cadetblue;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  /* border: red 1px dotted; */
+}
 
+.productDetails-container{
+  /* border: black 1px dotted; */
+  align-self: stretch; /* Aligns the container at the bottom */
 }
 
 .canvas-container {
-  /* border: rgb(0, 136, 0) dotted 5px; */
-  background-color: cornsilk;
+  /* background-color: cornsilk; */
   display: block;
   width: 805.328px;
   height: 472.5px;
-  /* touch-action: none; */
+  touch-action: none;
+  border: red 1px dotted;
+
 }
 
 .cardDetails-list {

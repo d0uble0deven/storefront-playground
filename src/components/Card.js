@@ -16,14 +16,15 @@ function Card({ data }) {
       navigate(`/item/${data.id}`);
     });
   };
+
   return (
     <>
-      <div className="card-container" onClick={() => handleClick("mock-param")}>
+      <div className="card-container">
         <ul>
-          <CardCategory category={data.category} />
-          <CardImage image={data.image} />
-          <CardTitle title={data.title} />
-          <CardSize size={data.size} />
+          <CardCategory category={data.category} handleClick={handleClick} />
+          <CardImage image={data.image} handleClick={handleClick} />
+          <CardTitle title={data.title} handleClick={handleClick} />
+          <CardSize size={data.size} handleClick={handleClick} />
           <CardHeart heart={data.heart} />
         </ul>
       </div>
