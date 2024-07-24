@@ -244,8 +244,8 @@ ul, li {
 .canvas-container {
   /* background-color: cornsilk; */
   display: block;
-  width: 805.328px;
-  height: 472.5px;
+  width: 50vw;
+  height: 40vh;
   touch-action: none;
   border: red 1px dotted;
 

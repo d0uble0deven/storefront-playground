@@ -93,10 +93,10 @@ function ItemDetails({ data }) {
                     onClick={handleToggleFavorite}
                     style={{
                       position: "absolute",
-                      right: "-370px",
-                      bottom: "150px",
-                      height: "100px",
-                      width: "100px",
+                      left: "20vw",
+                      bottom: "10vh",
+                      height: "10vh",
+                      width: "5vw",
                     }}
                     src={isFavorite ? favorite : unfavorite}
                     alt={isFavorite ? "favorite" : "unfavorite"}
