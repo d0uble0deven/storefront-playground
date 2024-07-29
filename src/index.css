@@ -22,8 +22,12 @@ code {
   flex-direction: column;
 }
 
-h1 {
+.marketPlace-title {
   margin: 5vh 13.5vw;
+}
+
+.itemDetails-title {
+  margin: auto 13.5vw;
 }
 
 .card-list {
@@ -227,7 +231,7 @@ ul, li {
 
 .cardDetails-container {
   border: 0 solid #e5e7eb;
-  width: 15vw;
+  width: 14vw;
   height: 5vh;
   margin: 1rem 0;
   display: flex;

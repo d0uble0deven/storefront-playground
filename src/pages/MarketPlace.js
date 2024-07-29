@@ -75,7 +75,7 @@ function MarketPlace({ data }) {
 
   return (
     <div>
-      <h1>
+      <h1 className="marketPlace-title">
         {query === "" ? `All Models (${data.length})` : `Search for ${query}`}
       </h1>
       <div className="search-and-sort">

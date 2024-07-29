@@ -81,7 +81,7 @@ function ItemDetails({ data }) {
   };
 
   return (
-    <div style={{ padding: "1vh 12.5vw" }}>
+    <div style={{ padding: "1vh 14vw" }}>
       <div className="column-container">
         <div className="column1">
           <h1>{item.title}</h1>
