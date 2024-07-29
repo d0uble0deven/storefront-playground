@@ -16,10 +16,24 @@ function NavBar() {
       <div className="nav-container">
         <ul>
           <li>
-            <Link to="Home/">Home</Link>
+            <Link className="text-white no-underline" to="Home/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/">MarketPlace</Link>
+            <Link className="text-white no-underline" to="/">
+              MarketPlace
+            </Link>
+          </li>
+          <li>
+            <Link className="text-white no-underline" to="/">
+              Catering
+            </Link>
+          </li>
+          <li>
+            <Link className="text-white no-underline" to="/">
+              Location & Hours
+            </Link>
           </li>
         </ul>
         <button onClick={toggleDarkMode}>

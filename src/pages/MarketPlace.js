@@ -86,7 +86,7 @@ function MarketPlace({ data }) {
             onChange={handleSortChange}
             value={sortConfig.key || ""}
           >
-            <option value="">Select Sorting Option</option>
+            <option value="">Sorting Options</option>
             <option value={SortingOptions.TITLE}>Sort by Title</option>
             <option value={SortingOptions.SIZE}>Sort by Size</option>
           </select>
